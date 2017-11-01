@@ -1,0 +1,14 @@
+.connect-notification {
+  position: fixed;
+  background: #6a1b9a;
+  padding: 20px;
+  border-radius: 6px;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  display: none;
+}
+
+.connect-notification.show {
+  display: block;
+}

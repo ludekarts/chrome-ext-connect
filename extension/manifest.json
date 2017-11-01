@@ -1,0 +1,32 @@
+{
+  "name": "Connect Example",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Sample Chrome Extension with chrome-ext-connect plugin",
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_title": "Connect Example",
+    "default_popup": "menu.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "js": [ "content.js"],
+      "run_at": "document_end",
+      "matches": ["http://*/*"]
+    }
+  ]
+}
